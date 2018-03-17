@@ -9,8 +9,8 @@
     <ul>
         {% for user in object_list %}
         <li>{{ user.name }}  :
-        <a href="{% url "update_user" server.id %}">{{ user.name }}</a>
-        <a href="{% url "delete_user" server.id %}">delete</a>
+        <a href="{% url "update_user" user.id %}">{{ user.name }}</a>
+        <a href="{% url "delete_user" user.id %}">delete</a>
         </li>
         {% endfor %}
     </ul>
