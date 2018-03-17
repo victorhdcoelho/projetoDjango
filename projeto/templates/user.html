@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User list</title>
+  </head>
+  <body>
+    <h1>Users:</h1>
+    <ul>
+        {% for user in object_list %}
+        <li>{{ user.name }}  :
+        <a href="{% url "update_user" user.id %}">{{ user.name }}</a>
+        <a href="{% url "delete_user" user.id %}">delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url "create_user" %}">New</a>
+  </body>
+</html>
